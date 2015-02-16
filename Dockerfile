@@ -45,9 +45,9 @@ Expose 8101
 RUN echo 'Exposing client port for Dynomite'
 EXPOSE 8102
 
-# Default port to execute the entrypoint (Dynomite)
+#Command to run in that port
 CMD ["--port 8102"]
 
 #Entrypoint
-RUN echo 'Starting Dynomite'
-RUN ["src/dynomite" , "-c" , "conf/redis_single.yml"]
+RUN ip addr show
+ENTRYPOINT ["src/dynomite", "-c", "conf/redis_single.yml", "-v", "11"]
