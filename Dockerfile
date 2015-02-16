@@ -36,9 +36,6 @@ RUN autoreconf -fvi \
 	&& ./configure --enable-debug=log \
 	&& make
 
-#Run Dynomite	
-RUN src/dynomite -h
-
 ## Installation Ends ##
 
 #Expose the peer ports
@@ -53,4 +50,6 @@ CMD ["--port 8102"]
 
 #Entrypoint
 RUN echo 'Starting Dynomite'
-ENTRYPOINT ["src/dynomite", "-c", "conf/dynomite.yml", "-v", "11"]
+RUN ["src/dynomite", "-c", "conf/dynomite.yml"]
+
+#ENTRYPOINT ["src/dynomite", "-c", "conf/dynomite.yml", "-v", "11"]
