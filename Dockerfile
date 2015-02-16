@@ -6,8 +6,8 @@
 #Set the base image to Ubuntu
 FROM ubuntu
 
-#File Author / Maintainer
-MAINTAINER Novjean Kannathara - Email: nkannath@purdue.edu
+# File Author / Maintainer
+MAINTAINER Ioannis Papapanagiotou - Email: ipapapan@purdue.edu
 
 # Update the repository sources list and Install package Build Essential
 RUN apt-get update && apt-get install -y \
