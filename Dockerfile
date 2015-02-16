@@ -50,4 +50,4 @@ CMD ["--port 8102"]
 
 #Entrypoint
 RUN echo 'Starting Dynomite'
-RUN ["src/dynomite","-c", "conf/redis_single.yml","-v, "11"]
+RUN ["src/dynomite" , "-c" , "conf/redis_single.yml"]
